@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    font-family: Arial, sans-serif;
+
+    overflow-y: auto;
+}
+
+
+
+#main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    min-height: 100vh;
+}
+
+
+
+
+#main1,
+#main2,
+#main3 {
+
+    width: 32%;
+
+    min-height: 500px;
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 22px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+
+
+#quiz {
+
+    width: 100%;
+    max-width: 360px;
+
+    min-height: 350px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background-color: white;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+#quiz h1 {
+
+    font-size: 38px;
+
+    color: #222;
+
+    margin-bottom: 15px;
+}
+
+
+
+
+#quiz p {
+
+    color: #666;
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+}
+
+
+
+
+#nameText {
+
+    font-weight: bold;
+
+    color: #333 !important;
+}
+
+
+/* Name input */
+
+#name1 {
+
+    width: 240px;
+
+    height: 45px;
+
+    padding: 10px 14px;
+
+    font-size: 16px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    margin-bottom: 18px;
+}
+
+#name1:focus {
+
+    border-color: #667eea;
+}
+
+
+
+#bt {
+
+    width: 190px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #667eea;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#bt:hover {
+
+    background-color: #5568d9;
+
+    transform: translateY(-2px);
+}
+
+#bt:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* Question box */
+
+#one {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    min-height: 340px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background-color: white;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Question */
+
+#ques {
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    color: #222;
+
+    margin-bottom: 20px;
+}
+
+
+/* Options */
+
+label {
+
+    width: 90%;
+
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px 15px;
+
+    margin: 6px 0;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+label:hover {
+
+    border-color: #667eea;
+
+    background-color: #f2f4ff;
+}
+
+
+/* Radio */
+
+label input {
+
+    margin-right: 12px;
+
+    cursor: pointer;
+}
+
+
+/* Next / Submit */
+
+#btn {
+
+    width: 130px;
+
+    height: 48px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #222;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#btn:hover {
+
+    background-color: #444;
+
+    transform: translateY(-2px);
+}
+
+#btn:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+
+#stud {
+
+    width: 100%;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    overflow-x: auto;
+}
+
+
+
+
+#stud1 {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+
+
+
+#stud1 th {
+
+    padding: 15px;
+
+    background-color: #667eea;
+
+    color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+
+
+
+#stud1 td {
+
+    padding: 14px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+#stud1 tr:hover {
+
+    background-color: #f4f5ff;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    #main {
+
+        flex-direction: column;
+    }
+
+    #main1,
+    #main2,
+    #main3 {
+
+        width: 100%;
+
+        min-height: 450px;
+    }
+}
